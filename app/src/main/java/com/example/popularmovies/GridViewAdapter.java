@@ -25,9 +25,10 @@ public class GridViewAdapter extends ArrayAdapter<URL> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Log.e("In Adaper","Gridadapter");
+        Log.e("In Adaper","Gridadapter"+position);
 
-        if (convertView==null){
+
+       if (convertView==null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.home_movie_posters,parent,false);
         }
 

@@ -26,13 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
        // int total = 20;   //fetchdata.getTotal_number_of_results();
 
-        SystemClock.sleep(4000);
+        SystemClock.sleep(3000);
 
-        int total = fetchdata.getAllObject().length;
+        int total =  fetchdata.getAllObject().length;
 
 
        // int total = 0;
         RetrievedValues[] obj = new RetrievedValues[total];
+
+
 
         for (int i =0 ; i<total; i++){
             obj[i]=new RetrievedValues(fetchdata.getAllObject()[i]);
@@ -57,8 +59,11 @@ public class MainActivity extends AppCompatActivity {
         Log.e("List","Formed");
 
         GridViewAdapter gridViewAdapter = new GridViewAdapter(this, imageList);
+        gridViewAdapter.notifyDataSetChanged();
+
 
         gridView.setAdapter(gridViewAdapter);
+        Log.e("Main: ", "Adapter initialized");
 
     }
 }
