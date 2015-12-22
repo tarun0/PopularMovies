@@ -18,7 +18,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'TMDb_KEY', "\"a9b9b9eab14fdf7ec57f2bfbf2269b05\""
+        it.buildConfigField 'String', 'TMDb_KEY', "\"INSERT YOUR KEY HERE\""
     }
 }
 
