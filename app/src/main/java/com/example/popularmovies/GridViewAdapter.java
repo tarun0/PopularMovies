@@ -1,7 +1,6 @@
 package com.example.popularmovies;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +24,6 @@ public class GridViewAdapter extends ArrayAdapter<URL> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Log.e("In Adaper","Gridadapter"+position);
-
-
        if (convertView==null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.home_movie_posters,parent,false);
         }
@@ -37,9 +33,6 @@ public class GridViewAdapter extends ArrayAdapter<URL> {
 
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setAdjustViewBounds(true);
-
-
-
 
         return convertView;
     }

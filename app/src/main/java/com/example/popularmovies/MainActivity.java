@@ -83,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         for(int i = 0; i<total; i++){
-            Log.e("In main: ",obj[i].get_poster_link().toString());
           imageList.add(obj[i].get_poster_link());
-
         }
 
 
