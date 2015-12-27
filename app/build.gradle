@@ -18,7 +18,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'TMDb_KEY', "\"INSERT YOUR KEY HERE\""
+        it.buildConfigField 'String', 'TMDb_KEY', "\"INSERT_YOUR_KEY_HERE\""
     }
 }
 
@@ -28,7 +28,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:support-v4:23.1.0'
 }
-repositories{
+repositories {
     mavenCentral()
 }

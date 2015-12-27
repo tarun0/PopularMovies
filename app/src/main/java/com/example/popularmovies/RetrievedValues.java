@@ -9,12 +9,12 @@ import java.net.URL;
  * Created by Tarun on 12-12-2015.
  */
 public class RetrievedValues {
+    public int total_items = -1;
     private String original_title;
     private URL poster_link;
     private String overview;
     private String rating;
     private String release_date;
-    public int total_items = -1;
 
     public RetrievedValues(RetrievedValues copy){
         original_title=copy.get_title();
@@ -36,20 +36,26 @@ public class RetrievedValues {
         set_poster_link(poster_path);
     }
 
-
+    public String get_title() {
+        return original_title;
+    }
 
     public  void set_title(String t){
         original_title = t;
 
     }
 
+    public URL get_poster_link() {
+        return poster_link;
+    }
+
     public void set_poster_link (String string){
         String base_url = "http://image.tmdb.org/t/p/";
-        String size = "w185";
+        String size = "w342";
         URL url = null;
 
         try {
-            url = new URL("http://image.tmdb.org/t/p/w185" + string);
+            url = new URL("http://image.tmdb.org/t/p/w342" + string);
         } catch (MalformedURLException u){
             Log.e("Retrieved class","URL construct Error");
         }
@@ -58,40 +64,34 @@ public class RetrievedValues {
         poster_link = url;
     }
 
-    public void set_overview(String t){
-        overview = t;
-    }
-
-    public void set_total_items(int i ) { total_items=i;}
-
-    public void set_rating(String t){
-        rating =t;
-    }
-
-    public void set_release_date(String t){
-        release_date =t;
-    }
-
-    public String get_title(){
-        return original_title;
-    }
-
-    public URL get_poster_link(){
-        return poster_link;
-    }
-
-    public String get_overview(){
+    public String get_overview() {
         return overview;
+    }
+
+    public void set_overview(String t) {
+        overview = t;
     }
 
     public String get_release_date(){
         return release_date;
     }
 
+    public void set_release_date(String t) {
+        release_date = t;
+    }
+
     public String get_rating(){
         return rating;
     }
 
+    public void set_rating(String t) {
+        rating = t;
+    }
+
     public int get_total_items(){return total_items;}
+
+    public void set_total_items(int i) {
+        total_items = i;
+    }
 
 }

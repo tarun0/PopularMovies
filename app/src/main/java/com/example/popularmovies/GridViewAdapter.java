@@ -35,6 +35,11 @@ public class GridViewAdapter extends ArrayAdapter<URL> {
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
         Picasso.with(getContext()).load(getItem(position).toString()).into(imageView);
 
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setAdjustViewBounds(true);
+
+
+
 
         return convertView;
     }
